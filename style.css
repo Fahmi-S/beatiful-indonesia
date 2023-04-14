@@ -14,12 +14,18 @@ a{
     color: black;
 }
 
+nav{
+    background-color: white;
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+}
+
+
 .navbar{
-    height: 10vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 10px;
     background-color: white;
 }
 
@@ -28,11 +34,22 @@ a{
     padding: 20px;
 }
 
+.navbar a:nth-child(6){
+    display: none;
+}
+
+.navbar :nth-child(1){
+    margin-left: 10px;
+}
+
+
 .logo{
     text-align: center;
     margin-right: auto;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     font-weight: bold;
     font-style: italic;
 }
@@ -266,6 +283,107 @@ a{
     margin-top: 0;
     background-color: white;
     border-radius: 100px 100px 0px 0px;
+}
+
+@media only screen and (max-width:374px){
+    .navbar{
+        justify-content: normal;
+        align-items: normal;
+    }
+
+    .navbar a:not(:nth-child(1)){
+        display: none;
+    }
+
+    .navbar a:nth-child(6){
+        display: block;
+    }
+
+    .logo :nth-child(1){
+        font-size: 20px;
+    }
+    
+    .logo :nth-child(2){
+        font-size: 8.5px;
+    }
+
+    .judul{
+        font-size: 10px;
+        margin-bottom: 0;
+    }
+
+    .place{
+        height: 255vh;
+    }
+    
+    .places{
+        width: 90vw;
+        height: 75vh;
+    }
+
+    .place-img{
+        height: 75vh;
+    }
+    
+    .place-desc h3{
+        max-width: 50vw;
+    }
+
+    .about{
+        height: 100vh;
+    }
+    
+    .about-us{
+        width: 75vw;
+        height: 80vh;
+    }
+    
+    .about-image{
+        width: 40vw;
+    }    
+
+    .contact{
+        height: 90vh;
+    }
+    
+    .contact-us{
+        height: 67vh;
+    }
+    
+    .contact-us label{
+        max-width: 55vw;
+    }
+    
+    .contact-us input{
+        width: 55vw;
+    }
+    
+    .contact-us textarea{
+        width: 55vw;
+    }
+    
+    .contact-us button{
+        width: 55vw;
+    }
+
+    .navbar.responsive{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav .navbar.responsive .ham{
+        position: absolute;
+        text-align: center;
+        top: 0;
+        right: 0;
+    }
+
+    .navbar.responsive a{
+        display: flex;
+        text-align: left;
+        position: relative;
+    }
 }
 
 
